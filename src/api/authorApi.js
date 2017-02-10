@@ -2,8 +2,9 @@
 
 /* eslint-disable no-console */
 //This file is mocking a web API by hitting hard coded data.
-var authors = require('./authorData').authors;
-var _ = require('lodash');
+import authorData from './authorData';
+var authors = authorData.authors;
+import _ from 'lodash';
 
 //This would be performed on the server in a real app. Just stubbing in.
 var _generateId = function(author) {
@@ -48,4 +49,4 @@ var AuthorApi = {
     }
 };
 
-module.exports = AuthorApi;
+export default AuthorApi;

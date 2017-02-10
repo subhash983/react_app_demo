@@ -20,6 +20,9 @@ class Header extends React.Component {
                         <li>
                             <a href="/#about">About</a>
                         </li>
+                        <li>
+                            <a href="/#authors">Authors</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
