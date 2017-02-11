@@ -6,6 +6,7 @@ class About extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <div>
@@ -25,4 +26,5 @@ class About extends React.Component {
         );
     }
 }
+
 export default About;

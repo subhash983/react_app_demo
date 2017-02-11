@@ -16,7 +16,7 @@ class AuthorPage extends React.Component {
         return (
             <div>
                 <h1>Authors</h1>
-                <AuthorList/>
+                <AuthorList authors={this.state.authors}/>
             </div>
         );
     }
