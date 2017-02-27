@@ -1,18 +1,21 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class AuthorList extends React.Component {
     constructor(props) {
         super(props)
     }
+
     render() {
         var createAuthorRow = function(author) {
             return (
                 <tr key={author.id}>
                     <td>
-                        <a href={"/#authors/" + author.id}>{author.id}</a>
+                        <Link to={"/author/" + author.id}>{author.id}</Link>
                     </td>
                     <td>
-                        {author.firtsName}{author.lastName}
+                        {author.firstName + " "}
+                        {author.lastName}
                     </td>
                 </tr>
             );

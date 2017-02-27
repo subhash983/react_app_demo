@@ -2,15 +2,15 @@ var authorData = {
     authors: [
         {
             id: 'author1',
-            firtsName: 'Shyam',
+            firstName: 'Shyam',
             lastName: 'Agarwal'
         }, {
             id: 'author2',
-            firtsName: 'Ram',
+            firstName: 'Ram',
             lastName: 'Gupta'
         }, {
             id: 'author3',
-            firtsName: 'Piyush',
+            firstName: 'Piyush',
             lastName: 'Shekhawat'
         }
     ]
