@@ -5,13 +5,15 @@ import ActionTypes from '../constants/actionTypes';
 import {EventEmitter} from 'events';
 const CHANGE_EVENT = 'change';
 
-var AuthorStore = Object.assign({}, EventEmitter.prototype, {
+let _authors = [];
+
+let AuthorStore = Object.assign({}, EventEmitter.prototype, {
     addChangeListener: (callback) => {
         this.on(CHANGE_EVENT, callback);
     },
 
     removeChangeListener: (callback) => {
-        thid.removeListener(CHANGE_EVENT, callback);
+        this.removeListener(CHANGE_EVENT, callback);
     },
 
     emitChange: () => {
@@ -19,14 +21,15 @@ var AuthorStore = Object.assign({}, EventEmitter.prototype, {
     }
 });
 
-Dispatcher.register((action)=>{
-  switch (action.actionType) {
-    case expression:
+Dispatcher.register((action) => {
+    switch (action.actionType) {
+        case ActionTypes.CREATE_AUTHOR:
+            _authors.push(action.Author);
+            AuthorStore.emitChange();
+            break;
+        default:
 
-      break;
-    default:
-
-  }
+    }
 });
 
-e
+export default AuthorStore;
